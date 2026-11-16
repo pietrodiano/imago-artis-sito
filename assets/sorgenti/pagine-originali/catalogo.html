@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Completo | Imago Artis Edizioni</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --bordeaux: #8B1A1A; --crema: #FDFCF8; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--crema); color: #1a1a1a; margin:0; }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif !important; }
+        .nav-link { font-family: 'Inter', sans-serif !important; font-size: 14px !important; text-transform: uppercase !important; letter-spacing: 0.1em !important; font-weight: 600 !important; color: #333 !important; }
+        .book-card { background: white; transition: 0.3s; border: 1px solid #eee; padding: 15px; display: flex; flex-direction: column; }
+        .book-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+ <!-- NAVIGAZIONE -->
+    <nav class="bg-white border-b border-stone-200 sticky top-0 z-[100] h-20 flex items-center shadow-sm font-sans">
+        <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="h-10 md:h-12 w-auto"></a>
+            <div class="hidden lg:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalogo.html" class="nav-link text-red-800">Catalogo Completo</a>
+                <a href="territorio.html" class="nav-link">Il Progetto Memoria</a>        
+                 <a href="autori.html" class="nav-link">Manoscritti</a>
+                <a href="chi-siamo.html" class="nav-link">La Redazione</a>
+				<a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+ <!--            <a href="https://wa.me/393286290576" class="bg-[#8B1A1A] text-white px-5 py-2 text-xs font-bold uppercase tracking-widest shadow-lg">Shop</a> -->
+            <a href="https://wa.me/393286290576" class="bg-[#8B1A1A] text-white px-5 py-2 text-xs font-bold uppercase shadow-lg">Shop</a>
+        </div>       </div>
+  </nav>
+  
+  
+    <header class="bg-stone-900 py-20 text-white text-center">
+        <h1 class="text-5xl italic mb-4">Catalogo Editoriale</h1>
+        <p class="text-stone-400 uppercase tracking-widest text-xs font-bold">Tutte le nostre pubblicazioni</p>
+    </header>
+
+  <!-- CATALOGO -->
+    <section id="catalogo" class="py-24 px-6 max-w-7xl mx-auto">
+   
+    <!-- <main class="max-w-7xl mx-auto py-16 px-6"> -->
+    
+      <!-- CODEX HIGHLIGHT -->
+        <div id="aurea" class="codex-highlight p-10 md:p-20 flex flex-col md:flex-row items-center gap-16 mb-24">
+            <img src="04Codex.jpg" class="w-full max-w-sm shadow-2xl border border-white">
+            <div class="max-w-xl">
+                <span class="text-red-800 text-xs uppercase font-bold tracking-[0.3em] mb-4 block">Edizioni di Pregio</span>
+                <h3 class="text-5xl md:text-6xl italic mb-8 text-stone-800 font-serif leading-tight">Il Codex Purpureus Rossanensis</h3>
+                <p class="text-stone-600 leading-relaxed mb-10 text-xl font-serif italic text-justify">"Un volume d'arte imponente che analizza l'arte e la spiritualità di uno dei manoscritti miniati più antichi del mondo."</p>
+                <a href="libri/codex.html" class="inline-block bg-stone-900 text-white px-10 py-4 text-xs uppercase tracking-widest font-bold hover:bg-red-800 transition shadow-lg">Esplora l'edizione</a>
+            </div>
+        </div>
+    
+        <!-- SEZIONE: COLLANA MEMORIA -->
+	        <div id="memoria" class="mb-24 pt-10">
+            <h2 class="text-3xl italic mb-12 border-l-4 border-red-800 pl-6 text-stone-800">Collana Memoria e Territorio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-justify">
+                <div class="book-card"><img src="01Rossano.jpg" class="book-img"><h4>Rossano tra storia</h4><p class="text-stone-400 text-xs italic mb-4">F.E. Carlino</p><a href="libri/rossano.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="02Mandatoriccio.jpg" class="book-img"><h4>Mandatoriccio</h4><p class="text-stone-400 text-xs italic mb-4">F.E. Carlino</p><a href="libri/mandatoriccio.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="03Scuola.jpg" class="book-img"><h4>Scuola</h4><p class="text-stone-400 text-xs italic mb-4">F.E. Carlino</p><a href="libri/scuola.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="05Patire.jpg" class="book-img"><h4>Il Patire</h4><p class="text-stone-400 text-xs italic mb-4">Giovanni Sapia</p><a href="libri/patire.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="06Universita.jpg" class="book-img"><h4>L'Università Popolare</h4><p class="text-stone-400 text-xs italic mb-4">F.E. Carlino</p><a href="libri/universita.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="11Terra.jpg" class="book-img"><h4>Terra di Mormanno</h4><p class="text-stone-400 text-xs italic mb-4">F. Regina</p><a href="libri/terra.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+            </div>
+        </div>
+		
+
+
+        <!-- SEZIONE: NARRATIVA E ALTRO -->
+         <div id="altre">
+            <h2 class="text-3xl italic mb-12 border-l-4 border-red-800 pl-6 text-stone-800">Narrativa e Spiritualità</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="book-card"><img src="07Tusa.jpg" class="book-img"><h4>Tusa dei Desideri</h4><p class="text-stone-400 text-xs italic mb-4">G. Labrosciano</p><a href="libri/tusa.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="08Sonetti.jpg" class="book-img"><h4>I Me' Sonetti</h4><p class="text-stone-400 text-xs italic mb-4">N. Cutrupi</p><a href="libri/sonetti.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="09Catechismo.jpg" class="book-img"><h4>Il Catechismo</h4><p class="text-stone-400 text-xs italic mb-4">Giovanni Sapia</p><a href="libri/catechismo.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="10Compassione.jpg" class="book-img"><h4>La Compassione</h4><p class="text-stone-400 text-xs italic mb-4">A. di Nardo</p><a href="libri/compassione.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="12Lettera.jpg" class="book-img"><h4>Lettera a mio figlio</h4><p class="text-stone-400 text-xs italic mb-4">G. Giordano</p><a href="libri/lettera.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+                <div class="book-card"><img src="13Ben.jpg" class="book-img"><h4>Il Ben Ch'io vi Trovai</h4><p class="text-stone-400 text-xs italic mb-4">C. Martirano</p><a href="libri/ben.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a></div>
+            </div>
+        </div>
+   </section>
+   
+  <!--   </main> -->
+
+     <!-- FOOTER -->
+    <footer class="bg-white border-t border-stone-200 py-24 px-6 mt-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
+            <div>
+                <img src="logo.png" alt="Logo" class="h-14 mb-8 opacity-100">
+                <p class="text-stone-800 italic leading-relaxed text-base font-serif">"Custodi di storie, promotori di identità. Una casa editrice radicata nel territorio calabrese con lo sguardo rivolto al mondo."</p>
+            </div>
+            <div>
+                <h4 class="text-[12px] font-bold uppercase mb-8 tracking-[0.2em] text-stone-900 border-b border-stone-100 pb-2">Navigazione</h4>
+                <div class="flex flex-col space-y-4 text-stone-900 text-xs font-bold uppercase tracking-widest font-sans">
+					<a href="catalogo.html" class="hover:text-red-800">Catalogo Completo</a>
+					<a href="chi-siamo.html" class="hover:text-red-800">La Redazione</a>
+                    <a href="autori.html" class="hover:text-red-800">Invia Manoscritto</a>
+                    <a href="territorio.html" class="hover:text-red-800">Progetto Memoria</a>
+                    <a href="contatti.html" class="hover:text-red-800">Contatti</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[12px] font-bold uppercase mb-8 tracking-[0.2em] text-stone-900 border-b border-stone-100 pb-2 font-sans">Contatti Ufficiali</h4>
+                <p class="text-stone-800 text-sm leading-relaxed font-serif italic space-y-2">
+                    <span class="block">Rossano (CS) - Calabria</span>
+                    <span class="block">info@imagoartisedizioni.it</span>
+                    <span class="block mt-4 text-stone-600 font-sans text-xs uppercase tracking-widest font-bold">P.IVA 03326490780</span>
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-stone-100 mt-20 pt-10 text-center">
+            <p class="text-stone-500 text-[10px] uppercase tracking-[0.3em] font-bold italic">Imago Artis Edizioni © 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inviaci il tuo Manoscritto | Imago Artis Edizioni</title>
+    
+    <!-- 1. Questo è il "motore" della grafica, non deve mai mancare -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. I Font ufficiali -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --bordeaux: #8B1A1A; --crema: #FDFCF8; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--crema); color: #1a1a1a; margin:0; }
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        
+        .nav-link { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: #333; transition: 0.3s; }
+        .nav-link:hover { color: var(--bordeaux); }
+        .group:hover .group-hover\:block { display: block !important; }
+    </style>
+</head>
+<body>
+
+        <!-- NAVIGAZIONE -->
+    <nav class="bg-white border-b border-stone-200 sticky top-0 z-[100] h-20 flex items-center shadow-sm font-sans">
+        <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="h-10 md:h-12 w-auto"></a>
+            <div class="hidden lg:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalogo.html" class="nav-link text-red-800">Catalogo Completo</a>
+                <a href="territorio.html" class="nav-link">Il Progetto Memoria</a>        
+                 <a href="autori.html" class="nav-link">Manoscritti</a>
+                <a href="chi-siamo.html" class="nav-link">La Redazione</a>
+				<a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+ <!--            <a href="https://wa.me/393286290576" class="bg-[#8B1A1A] text-white px-5 py-2 text-xs font-bold uppercase tracking-widest shadow-lg">Shop</a> -->
+            <a href="https://wa.me/393286290576" class="bg-[#8B1A1A] text-white px-5 py-2 text-xs font-bold uppercase shadow-lg">Shop</a>
+        </div>       </div>
+  </nav>
+  
+    <main class="max-w-4xl mx-auto py-20 px-6">
+        <h1 class="text-5xl italic mb-10 text-center">Recupero dell'Identità</h1>
+        <div class="prose prose-stone lg:prose-xl mx-auto">
+            <p class="mb-8 text-xl leading-relaxed text-justify italic">
+                Il nostro impegno è rivolto alla riscoperta di quelle opere che il tempo ha reso introvabili, ma che rappresentano i pilastri della cultura del nostro Mezzogiorno.
+            </p>
+            <h2 class="text-3xl accent-color mb-6 italic">Il progetto "Ristampe Storiche"</h2>
+            <p class="mb-6">
+                Attraverso un attento lavoro di ricerca in biblioteche e archivi privati, individuiamo saggi, cronache e testi d'epoca che meritano di essere restituiti al pubblico. Non ci limitiamo a ristampare: ogni volume viene arricchito da introduzioni critiche, note storiche e, dove possibile, apparati iconografici restaurati.
+            </p>
+            <div class="bg-red-50 p-10 border-l-4 border-red-800 my-12">
+                <h3 class="text-2xl font-bold mb-4 accent-color">Esempio: Il Codex Purpureus</h3>
+                <p>Il nostro lavoro sul Codex Rossanensis è l'emblema di questa missione: rendere un patrimonio dell'umanità (UNESCO) comprensibile, vicino e fruibile, mantenendo intatto il suo immenso valore scientifico.</p>
+            </div>
+        </div>
+    </main>
+	
+	 <!-- FOOTER -->
+    <footer class="bg-white border-t border-stone-200 py-24 px-6 mt-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
+            <div>
+                <img src="logo.png" alt="Logo" class="h-14 mb-8 opacity-100">
+                <p class="text-stone-800 italic leading-relaxed text-base font-serif">"Custodi di storie, promotori di identità. Una casa editrice radicata nel territorio calabrese con lo sguardo rivolto al mondo."</p>
+            </div>
+            <div>
+                <h4 class="text-[12px] font-bold uppercase mb-8 tracking-[0.2em] text-stone-900 border-b border-stone-100 pb-2">Navigazione</h4>
+                <div class="flex flex-col space-y-4 text-stone-900 text-xs font-bold uppercase tracking-widest font-sans">
+					<a href="catalogo.html" class="hover:text-red-800">Catalogo Completo</a>
+					<a href="chi-siamo.html" class="hover:text-red-800">La Redazione</a>
+                    <a href="autori.html" class="hover:text-red-800">Invia Manoscritto</a>
+                    <a href="territorio.html" class="hover:text-red-800">Progetto Memoria</a>
+                    <a href="contatti.html" class="hover:text-red-800">Contatti</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[12px] font-bold uppercase mb-8 tracking-[0.2em] text-stone-900 border-b border-stone-100 pb-2 font-sans">Contatti Ufficiali</h4>
+                <p class="text-stone-800 text-sm leading-relaxed font-serif italic space-y-2">
+                    <span class="block">Rossano (CS) - Calabria</span>
+                    <span class="block">info@imagoartisedizioni.it</span>
+                    <span class="block mt-4 text-stone-600 font-sans text-xs uppercase tracking-widest font-bold">P.IVA 03326490780</span>
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-stone-100 mt-20 pt-10 text-center">
+            <p class="text-stone-500 text-[10px] uppercase tracking-[0.3em] font-bold italic">Imago Artis Edizioni © 2026</p>
+        </div>
+    </footer>
+	
+</body>
+</html>

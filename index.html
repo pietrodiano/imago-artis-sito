@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Script e Font -->
+    <style>
+        :root { --bordeaux: #8B1A1A; --oro: #C5A059; --crema: #FDFCF8; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--crema); color: #1a1a1a; margin:0; padding:0; background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif !important; }
+        
+        /* Navigazione */
+        .nav-link { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: #333 !important; transition: 0.3s; font-family: 'Inter', sans-serif !important; }
+        .nav-link:hover { color: var(--bordeaux) !important; }
+        .group:hover .group-hover\:block { display: block !important; }
+
+        /* Video Header */
+        .video-container { position: relative; height: 80vh; width: 100%; overflow: hidden; background: #000; }
+        video { object-fit: cover; width: 100%; height: 100%; position: absolute; opacity: 0.75; z-index: 1; }
+        .hero-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; color: white; flex-direction: column; padding: 20px; z-index: 10; background: rgba(0,0,0,0.35); }
+
+        /* Catalogo */
+        .book-card { background: white; transition: 0.4s; border: 1px solid #e5e7eb; padding: 20px; display: flex; flex-direction: column; height: 100%; }
+        .book-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .book-img { aspect-ratio: 2/3; width: 100%; object-fit: cover; margin-bottom: 20px; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); }
+        .codex-highlight { background-color: #f9f7f2; border-top: 1px solid #e5e0d5; border-bottom: 1px solid #e5e0d5; }
+		
+		/* Effetto dissolvenza per il video */
+        video {
+            animation: fadeInVideo 2s ease-in-out;
+        }
+
+        @keyframes fadeInVideo {
+            from { opacity: 0; }
+            to { opacity: 0.75; }
+        }
+
+        /* Assicuriamoci che il poster sia centrato come il video */
+        .video-container { background-image: url('hero-poster.webp'); background-size: cover; background-position: center; }
+		
+    </style>
+    <!-- head:seo -->
+    <title>Imago Artis Edizioni — Casa editrice indipendente in Calabria</title>
+    <meta name="description" content="Casa editrice indipendente di Rossano (CS): volumi sul Codex Purpureus Rossanensis, memoria e territorio calabrese, narrativa e nuovi autori. Scopri il catalogo.">
+    <link rel="canonical" href="https://imagoartisedizioni.it/">
+    <meta name="theme-color" content="#8B1A1A">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Imago Artis Edizioni">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Imago Artis Edizioni — Casa editrice indipendente in Calabria">
+    <meta property="og:description" content="Casa editrice indipendente di Rossano (CS): volumi sul Codex Purpureus Rossanensis, memoria e territorio calabrese, narrativa e nuovi autori. Scopri il catalogo.">
+    <meta property="og:url" content="https://imagoartisedizioni.it/">
+    <meta property="og:image" content="https://imagoartisedizioni.it/og/home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Imago Artis Edizioni — Casa editrice indipendente in Calabria">
+    <meta name="twitter:description" content="Casa editrice indipendente di Rossano (CS): volumi sul Codex Purpureus Rossanensis, memoria e territorio calabrese, narrativa e nuovi autori. Scopri il catalogo.">
+    <meta name="twitter:image" content="https://imagoartisedizioni.it/og/home.jpg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preload" href="assets/fonts/cormorant-garamond-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/site.css">
+    <script src="assets/site.js" defer></script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Imago Artis Edizioni", "url": "https://imagoartisedizioni.it/", "logo": "https://imagoartisedizioni.it/logo.png", "email": "info@imagoartisedizioni.it", "vatID": "03326490780", "address": {"@type": "PostalAddress", "addressLocality": "Rossano", "addressRegion": "CS", "addressCountry": "IT"}}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai ai contenuti</a>
+
+  <!-- NAVIGAZIONE -->
+    <nav aria-label="Navigazione principale" class="bg-white border-b border-stone-200 sticky top-0 z-[100] h-20 flex items-center shadow-sm font-sans">
+        <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="h-10 md:h-12 w-auto" width="600" height="274"></a>
+            <div class="hidden lg:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalogo.html" class="nav-link text-red-800">Catalogo Completo</a>
+                <a href="territorio.html" class="nav-link">Il Progetto Memoria</a>        
+                 <a href="autori.html" class="nav-link">Manoscritti</a>
+                <a href="chi-siamo.html" class="nav-link">La Redazione</a>
+				<a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+ <!--            <a href="https://wa.me/393286290576" class="bg-[#8B1A1A] text-white px-5 py-2 text-xs font-bold uppercase tracking-widest shadow-lg">Shop</a> -->
+            <a href="https://wa.me/393286290576" class="bg-[#8B1A1A] text-white px-5 py-2 text-xs font-bold uppercase shadow-lg">Shop</a>
+        </div>       </div>
+  </nav>
+
+    <!-- HEADER VIDEO -->
+    <header id="main" class="video-container">
+        
+        <video autoplay muted loop playsinline preload="metadata" poster="hero-poster.webp" class="hero-video">
+            <source src="video-sfondo.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+            <span class="text-oro uppercase tracking-[0.4em] text-sm mb-4 font-bold">Rossano • Calabria</span>
+            <h1 class="text-5xl md:text-8xl italic mb-6 font-serif">Imago Artis Edizioni</h1>
+            <p class="text-xl md:text-3xl font-light italic max-w-3xl">"Custodi della memoria, editori dell'identità: diamo carta bianca alle radici del domani."</p>
+            <a href="#catalogo" class="mt-10 border-2 border-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Esplora il Catalogo</a>
+        </div>
+    </header>
+
+    <!-- CRONACHE NEWS 
+    <section class="py-24 px-6 bg-white border-b border-stone-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16 border-b pb-6 border-stone-100">
+                <h2 class="text-4xl italic text-stone-800 font-serif">Cronache Editoriali</h2>
+                <a href="#" class="text-xs uppercase font-bold border-b border-stone-800 pb-1">Tutte le notizie</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <article class="group cursor-pointer">
+                    <div class="aspect-video bg-stone-100 mb-6 overflow-hidden border">
+                        <img src="04Codex.webp" class="w-full h-full object-cover transition group-hover:scale-105" alt="Copertina di Il Codex Purpureus Rossanensis di Franco Emilio Carlino" loading="lazy" decoding="async" width="900" height="1447">
+                    </div>
+                    <span class="text-[10px] uppercase font-bold text-red-800 tracking-widest">Eventi</span>
+                    <h3 class="text-2xl italic mt-3 mb-4 font-serif group-hover:text-red-800 transition">Il Codex vola a Firenze</h3>
+                    <p class="text-stone-500 text-sm italic">Presentazione ufficiale della nuova edizione critica presso il Gabinetto Vieusseux.</p>
+                </article>
+                <article class="group">
+                    <div class="aspect-video bg-stone-50 mb-6 border flex items-center justify-center italic text-stone-300 font-serif text-2xl">Archivio Storico</div>
+                    <span class="text-[10px] uppercase font-bold text-red-800 tracking-widest">Ricerca</span>
+                    <h3 class="text-2xl italic mt-3 mb-4 font-serif">Riscoprire Rossano</h3>
+                    <p class="text-stone-500 text-sm italic leading-relaxed">Un viaggio tra i faldoni degli archivi calabresi con Franco Emilio Carlino.</p>
+                </article>
+                <article class="group">
+                    <div class="aspect-video bg-stone-50 mb-6 border flex items-center justify-center italic text-stone-300 font-serif text-2xl">Nuovi Autori</div>
+                    <span class="text-[10px] uppercase font-bold text-red-800 tracking-widest">Editoria</span>
+                    <h3 class="text-2xl italic mt-3 mb-4 font-serif">Call per la collana Incipit</h3>
+                    <p class="text-stone-500 text-sm italic leading-relaxed">Cerchiamo manoscritti che sappiano raccontare l'anima del territorio.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+	-->
+
+    <!-- CATALOGO -->
+    <section id="catalogo" class="py-24 px-6 max-w-7xl mx-auto">
+        
+        <!-- COLLANA MEMORIA -->
+        <div id="memoria" class="mb-24 pt-10">
+            <h2 class="text-3xl italic mb-12 border-l-4 border-red-800 pl-6 text-stone-800">Collana Memoria e Territorio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-justify">
+                <div class="book-card"><img src="01Rossano.webp" class="book-img" alt="Copertina di Rossano tra storia e bio-bibliografia di Franco Emilio Carlino" loading="lazy" decoding="async" width="900" height="1317"><h4>Rossano tra storia</h4><p class="text-stone-400 text-xs italic mb-4">F.E. Carlino</p><a href="libri/rossano.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 25,00</p></div>
+                <div class="book-card"><img src="02Mandatoriccio.webp" class="book-img" alt="Copertina di Mandatoriccio, storia di un feudo di Franco Emilio Carlino" loading="lazy" decoding="async" width="900" height="1171"><h4>Mandatoriccio</h4><p class="text-stone-400 text-xs italic mb-4">F.E. Carlino</p><a href="libri/mandatoriccio.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 20,00</p></div>
+                <div class="book-card"><img src="03Scuola.webp" class="book-img" alt="Copertina di Scuola: il punto di vista di Franco Emilio Carlino" loading="lazy" decoding="async" width="722" height="1000"><h4>Scuola</h4><p class="text-stone-400 text-xs italic mb-4">F.E. Carlino</p><a href="libri/scuola.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 12,00</p></div>
+                <div class="book-card"><img src="05Patire.webp" class="book-img" alt="Copertina di Il Patire — Storia e colori di un&#x27;antica abbazia di Franco Emilio Carlino" loading="lazy" decoding="async" width="848" height="1018"><h4>Il Patire</h4><p class="text-stone-400 text-xs italic mb-4">Giovanni Sapia</p><a href="libri/patire.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 13,00</p></div>
+                <div class="book-card"><img src="06Universita.webp" class="book-img" alt="Copertina di L&#x27;Università Popolare di Rossano di Franco Emilio Carlino" loading="lazy" decoding="async" width="848" height="1200"><h4>L'Università Popolare</h4><p class="text-stone-400 text-xs italic mb-4">F.E. Carlino</p><a href="libri/universita.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 18,00</p></div>
+                <div class="book-card"><img src="11Terra.webp" class="book-img" alt="Copertina di La Terra di Mormanno in Calabria Citra nel Viceregno di Francesco Regina" loading="lazy" decoding="async" width="750" height="1044"><h4>Terra di Mormanno</h4><p class="text-stone-400 text-xs italic mb-4">F. Regina</p><a href="libri/terra.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 8,00</p></div>
+            </div>
+					
+        </div>
+		<div class="text-center mt-12">
+			<a href="catalogo.html" class="text-red-800 font-bold uppercase text-xs border-b-2 border-red-800 pb-1">Vedi tutto il catalogo →</a>
+		</div>
+		
+        <!-- CODEX HIGHLIGHT -->
+        <div id="aurea" class="codex-highlight p-10 md:p-20 flex flex-col md:flex-row items-center gap-16 mb-24">
+            <img src="04Codex.webp" class="w-full max-w-sm shadow-2xl border border-white" alt="Copertina di Il Codex Purpureus Rossanensis di Franco Emilio Carlino" loading="lazy" decoding="async" width="900" height="1447">
+            <div class="max-w-xl">
+                <span class="text-red-800 text-xs uppercase font-bold tracking-[0.3em] mb-4 block">Edizioni di Pregio</span>
+                <h3 class="text-5xl md:text-6xl italic mb-8 text-stone-800 font-serif leading-tight">Il Codex Purpureus Rossanensis</h3>
+                <p class="text-stone-600 leading-relaxed mb-10 text-xl font-serif italic text-justify">"Un volume d'arte imponente che analizza l'arte e la spiritualità di uno dei manoscritti miniati più antichi del mondo."</p>
+                <a href="libri/codex.html" class="inline-block bg-stone-900 text-white px-10 py-4 text-xs uppercase tracking-widest font-bold hover:bg-red-800 transition shadow-lg">Esplora l'edizione</a>
+            </div>
+        </div>
+	
+
+
+        <!-- ALTRE OPERE -->
+        <div id="altre">
+            <h2 class="text-3xl italic mb-12 border-l-4 border-red-800 pl-6 text-stone-800">Narrativa e Spiritualità</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="book-card"><img src="07Tusa.webp" class="book-img" alt="Copertina di Tusa dei Desideri di Gianfranco Labrosciano" loading="lazy" decoding="async" width="500" height="774"><h4>Tusa dei Desideri</h4><p class="text-stone-400 text-xs italic mb-4">G. Labrosciano</p><a href="libri/tusa.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 12,00</p></div>
+                <div class="book-card"><img src="08Sonetti.webp" class="book-img" alt="Copertina di I Me&#x27; Sonetti di Natale Cutrupi" loading="lazy" decoding="async" width="750" height="1053"><h4>I Me' Sonetti</h4><p class="text-stone-400 text-xs italic mb-4">N. Cutrupi</p><a href="libri/sonetti.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 12,00</p></div>
+                <div class="book-card"><img src="09Catechismo.webp" class="book-img" alt="Copertina di Il Catechismo del Codex Purpureus Rossanensis di Giovanni Sapia" loading="lazy" decoding="async" width="675" height="900"><h4>Il Catechismo</h4><p class="text-stone-400 text-xs italic mb-4">Giovanni Sapia</p><a href="libri/catechismo.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 18,00</p></div>
+                <div class="book-card"><img src="10Compassione.webp" class="book-img" alt="Copertina di La Compassione dall&#x27;alto della Croce di Antonio di Nardo" loading="lazy" decoding="async" width="900" height="1244"><h4>La Compassione</h4><p class="text-stone-400 text-xs italic mb-4">A. di Nardo</p><a href="libri/compassione.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 8,00</p></div>
+                <div class="book-card"><img src="12Lettera.webp" class="book-img" alt="Copertina di Lettera a mio figlio sulla Politica di Giandonato Giordano" loading="lazy" decoding="async" width="450" height="650"><h4>Lettera a mio figlio</h4><p class="text-stone-400 text-xs italic mb-4">G. Giordano</p><a href="libri/lettera.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 10,00</p></div>
+                <div class="book-card"><img src="13Ben.webp" class="book-img" alt="Copertina di Il Ben Ch&#x27;io vi Trovai di Coriolano Martirano" loading="lazy" decoding="async" width="552" height="812"><h4>Il Ben Ch'io vi Trovai</h4><p class="text-stone-400 text-xs italic mb-4">C. Martirano</p><a href="libri/ben.html" class="mt-auto border-b border-black text-[10px] uppercase font-bold self-start pb-1">Esplora scheda</a><p class="book-price">€ 15,00</p></div>
+            </div>
+        </div>
+		<div class="text-center mt-12">
+			<a href="catalogo.html" class="text-red-800 font-bold uppercase text-xs border-b-2 border-red-800 pb-1">Vedi tutto il catalogo →</a>
+		</div>
+    </section>
+
+     <!-- FOOTER -->
+    <footer class="bg-white border-t border-stone-200 py-24 px-6 mt-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
+            <div>
+                <img src="logo.png" alt="Logo" class="h-14 mb-8 opacity-100" width="600" height="274">
+                <p class="text-stone-800 italic leading-relaxed text-base font-serif">"Custodi di storie, promotori di identità. Una casa editrice radicata nel territorio calabrese con lo sguardo rivolto al mondo."</p>
+            </div>
+            <div>
+                <h4 class="text-[12px] font-bold uppercase mb-8 tracking-[0.2em] text-stone-900 border-b border-stone-100 pb-2">Navigazione</h4>
+                <div class="flex flex-col space-y-4 text-stone-900 text-xs font-bold uppercase tracking-widest font-sans">
+					<a href="catalogo.html" class="hover:text-red-800">Catalogo Completo</a>
+					<a href="chi-siamo.html" class="hover:text-red-800">La Redazione</a>
+                    <a href="autori.html" class="hover:text-red-800">Invia Manoscritto</a>
+                    <a href="territorio.html" class="hover:text-red-800">Progetto Memoria</a>
+                    <a href="contatti.html" class="hover:text-red-800">Contatti</a>
+                    <a href="privacy.html" class="hover:text-red-800">Privacy</a>
+                    <a href="condizioni-di-vendita.html" class="hover:text-red-800">Condizioni di vendita</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[12px] font-bold uppercase mb-8 tracking-[0.2em] text-stone-900 border-b border-stone-100 pb-2 font-sans">Contatti Ufficiali</h4>
+                <p class="text-stone-800 text-sm leading-relaxed font-serif italic space-y-2">
+                    <span class="block">Rossano (CS) - Calabria</span>
+                    <span class="block">info@imagoartisedizioni.it</span>
+                    <span class="block mt-4 text-stone-600 font-sans text-xs uppercase tracking-widest font-bold">P.IVA 03326490780</span>
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-stone-100 mt-20 pt-10 text-center">
+            <p class="text-stone-500 text-[10px] uppercase tracking-[0.3em] font-bold italic">Imago Artis Edizioni © 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>

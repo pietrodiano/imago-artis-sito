@@ -1,0 +1,7 @@
+assets/sorgenti/
+build.py
+README.md
+package.json
+package-lock.json
+tailwind.config.js
+node_modules/

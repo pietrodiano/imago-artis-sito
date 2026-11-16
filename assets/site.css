@@ -1,0 +1,144 @@
+/* Stili condivisi da tutte le pagine — Imago Artis Edizioni */
+
+:root {
+  --bordeaux: #8B1A1A;
+  --oro: #C5A059;
+  --crema: #FDFCF8;
+}
+
+/* La classe usata nell'hero non esiste nel set Tailwind: la definiamo qui */
+.text-oro { color: var(--oro) !important; }
+
+/* Accessibilità: link per saltare al contenuto */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: #fff;
+  color: var(--bordeaux);
+  padding: 12px 18px;
+  font: 700 13px/1 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
+}
+.skip-link:focus { left: 12px; top: 12px; }
+
+:focus-visible {
+  outline: 2px solid var(--bordeaux);
+  outline-offset: 3px;
+}
+
+/* Immagini: evitano scatti di layout quando mancano le misure */
+img { max-width: 100%; height: auto; }
+.book-card img.book-img { height: auto; }
+
+/* ---------- Menu mobile ---------- */
+.nav-burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #e7e5e4;
+  background: #fff;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.nav-burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #1c1917;
+  transition: transform .25s ease, opacity .2s ease;
+}
+.nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #e7e5e4;
+  border-bottom: 1px solid #e7e5e4;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, .12);
+  z-index: 120;
+  max-height: 75vh;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+.mobile-menu[hidden] { display: none; }
+.mobile-menu a {
+  display: block;
+  padding: 15px 24px;
+  font: 700 12px/1 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #1c1917;
+  border-bottom: 1px solid #f5f5f4;
+}
+.mobile-menu a:last-child { border-bottom: 0; }
+.mobile-menu a:hover, .mobile-menu a:focus { color: var(--bordeaux); background: #fdfcf8; }
+.mobile-menu .mm-shop { color: var(--bordeaux); }
+
+@media (max-width: 1023px) {
+  .nav-burger { display: flex; }
+}
+body.menu-open { overflow: hidden; }
+
+/* ---------- Prezzi nel catalogo ---------- */
+.book-price {
+  font: 700 13px/1 'Inter', sans-serif;
+  color: var(--bordeaux);
+  letter-spacing: .04em;
+  margin: 0 0 14px;
+}
+.book-price span {
+  display: block;
+  font: 400 10px/1.6 'Inter', sans-serif;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #a8a29e;
+}
+
+/* ---------- Form contatti ---------- */
+.field-error {
+  border-color: var(--bordeaux) !important;
+  background: #fdf2f2 !important;
+}
+.consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font: 400 12px/1.5 'Inter', sans-serif;
+  color: #57534e;
+  text-align: left;
+}
+.consent input { margin-top: 3px; flex: 0 0 auto; }
+.consent a { color: var(--bordeaux); text-decoration: underline; }
+.form-status {
+  font: 400 13px/1.5 'Inter', sans-serif;
+  margin: 0;
+  min-height: 20px;
+}
+.form-status.is-error { color: #b91c1c; }
+.form-status.is-ok { color: #15803d; }
+.form-note { font: 400 11px/1.5 'Inter', sans-serif; color: #78716c; }
+
+/* ---------- Hero video: fallback poster ---------- */
+@media (prefers-reduced-motion: reduce) {
+  video { display: none !important; }
+  .video-container { background-image: url('../hero-poster.webp'); background-size: cover; background-position: center; }
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* Pagine legali */
+.legal h2 { margin-top: 2.5rem; }
+.legal p, .legal li { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.75; color: #44403c; }
+.legal ul { list-style: disc; padding-left: 1.4rem; }

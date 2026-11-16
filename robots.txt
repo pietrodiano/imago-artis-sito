@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/sorgenti/
+
+Sitemap: https://imagoartisedizioni.it/sitemap.xml
