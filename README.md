@@ -117,6 +117,20 @@ nel tuo account, chiedi all'account `Imagoartis` di rimuovere il dominio o di tr
 In entrambi i casi lascia vuoto il build command: `package.json` serve solo in locale per
 `npm run build:css`.
 
+### Deploy automatico senza collegare Git in Vercel
+
+Se il progetto Vercel non può essere collegato al repository, `.github/workflows/deploy.yml`
+pubblica a ogni push su `main` usando Vercel CLI. Servono tre secret del repository
+(**Settings → Secrets and variables → Actions**):
+
+| Secret | Dove si trova |
+| --- | --- |
+| `VERCEL_TOKEN` | Vercel → Account Settings → Tokens → Create |
+| `VERCEL_ORG_ID` | `vercel project` locale oppure Project Settings → General |
+| `VERCEL_PROJECT_ID` | come sopra |
+
+Finché i secret non ci sono, il workflow non fallisce: salta il deploy e lascia un avviso.
+
 ### 3. Dopo il deploy verificare
 
 - `/`, `/catalogo.html`, `/libri/rossano.html`, `/contatti.html` → 200;

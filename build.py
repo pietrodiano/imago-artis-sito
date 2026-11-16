@@ -21,6 +21,7 @@ SRC = os.path.join(ROOT, "assets", "sorgenti", "pagine-originali")
 SITE = "https://imagoartisedizioni.it"
 EMAIL = "info@imagoartisedizioni.it"
 VAT = "03326490780"
+GOOGLE_VERIFICATION = "J86MnaHWH8AGKfXeIleb_x-7fKvymelmllWCQOnYLSI"
 
 PAGES = {
     "index.html": {
@@ -284,9 +285,14 @@ def make_og():
 
 def seo_block(meta, rel, path, image, jsonld):
     url = SITE + path
+    google = (
+        f'    <meta name="google-site-verification" content="{GOOGLE_VERIFICATION}">\n'
+        if path == "/"
+        else ""
+    )
     return f"""    <!-- head:seo -->
     <title>{html.escape(meta['title'])}</title>
-    <meta name="description" content="{html.escape(meta['description'], quote=True)}">
+{google}    <meta name="description" content="{html.escape(meta['description'], quote=True)}">
     <link rel="canonical" href="{url}">
     <meta name="theme-color" content="#8B1A1A">
     <meta property="og:type" content="{'book' if jsonld.get('@type') == 'Book' else 'website'}">
